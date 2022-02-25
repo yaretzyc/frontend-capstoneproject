@@ -8,6 +8,8 @@ import { QuoteComponent } from './quote/quote.component';
 import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
 
+// import {AppRoutingModule } from './app-routing.module'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    // AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
