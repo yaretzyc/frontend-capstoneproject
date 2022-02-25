@@ -20,17 +20,19 @@ export class QuoteService {
   
   //ADD QUOTE
   addQuote(quote: Quote): Observable<Quote> {
-    return this.httpClient.post<Quote>(`${this.apibaseUrl}/quote`, quote);
+    return this.httpClient.post<Quote>(`${this.apibaseUrl}/quote/`, quote);
   }
   
-  //UPDATE QUOTE
-  updateQuote(quote:Quote): Observable<Quote>{
-    return this.httpClient.put<Quote>(`${this.apibaseUrl}/`, quote);
-  }
+  // //UPDATE QUOTE
+  // updateQuote(quoteId: number): Observable<Quote>{
+  //   return this.httpClient.put<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`, quote);
+  // }
 
   //DELETE QUOTE
   deleteQuote(quoteId: number): Observable<void>{
-    return this.httpClient.delete<void>(`${this.apibaseUrl}/${quoteId}`);
+    return this.httpClient.delete<void>(`${this.apibaseUrl}/quote/${quoteId}/`);
   }
 
+
+  //GET ONE QUOTE: 
 }
