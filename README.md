@@ -38,3 +38,9 @@
 ## CHALLENGES
 
 ## FUTURE IMPROVEMENTS
+   
+## Day by Day 
+   - wed: project planning, user stories, backend Erd,
+   -thur: Spring boot modules, postman test apis, create angular app components
+   -fri:  cors config(backend),environments baseurlapi, quote list, quote create, quote service, approuting, logo, CURRETNLY: LANDING PAGE AND DESIGN 
+   -sat: 
