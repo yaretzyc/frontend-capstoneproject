@@ -6,6 +6,7 @@ import { NavComponent } from './nav/nav.component';
 import { PostComponent } from './post/post.component';
 import { QuoteComponent } from './quote/quote.component';
 import { LandingComponent } from './landing/landing.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LandingComponent } from './landing/landing.component';
     LandingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

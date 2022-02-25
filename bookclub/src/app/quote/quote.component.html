@@ -1,1 +1,10 @@
 <p>quote works!</p>
+
+<p>quote list</p>
+<ul *ngFor = "let q of quotes">
+    <li>{{q.chapter}}</li>
+    <li>{{q.name}}</li>
+    <li>{{q.quote}}</li>
+    <li>{{q.page}}</li>
+    <li>{{q.id}}</li>
+</ul>
