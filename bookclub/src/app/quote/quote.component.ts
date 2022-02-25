@@ -10,6 +10,7 @@ import { QuoteService } from '../services/quote.service';
 export class QuoteComponent implements OnInit {
 
   quotes: Array<Quote>=[];
+  // public quotes: Quote[];
 
   constructor(private quoteService: QuoteService) { }
 
@@ -17,11 +18,18 @@ export class QuoteComponent implements OnInit {
     this.getQuotes();
   }
 
-  private getQuotes(){
-    this.quoteService.getQuoteList().subscribe(data => {
-      this.quotes = data;
-    } )
-    
+  getQuotes():void{
+    this.quoteService.getQuoteList().subscribe(
+      (response: Quote[]) =>{
+        this.quotes = response;
+        console.log(this.quotes);
+      }
+    )
   }
+  // private getQuotes(){
+  //   this.quoteService.getQuoteList().subscribe(data => {
+  //     this.quotes = data;
+  //   } )
+  // }
 
 }
