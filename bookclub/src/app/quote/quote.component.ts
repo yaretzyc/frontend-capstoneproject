@@ -9,23 +9,49 @@ import { QuoteService } from '../services/quote.service';
 })
 export class QuoteComponent implements OnInit {
 
-  quotes: Array<Quote>=[];
-  // public quotes: Quote[];
+  quote: Array<Quote>=[];
+  quotes: Quote = new Quote();
+  // quotes: Quote[];
 
   constructor(private quoteService: QuoteService) { }
 
   ngOnInit(): void {
-    this.getQuotes();
+    // this.getQuotes();
   }
+  // getQuoteList(){
+  //   this.quoteService.getQuoteList().subscribe(data => {
+  //     this.quote = data;
+  //   })
+  // }
 
-  getQuotes():void{
+  getQuotesList():void{
     this.quoteService.getQuoteList().subscribe(
       (response: Quote[]) =>{
-        this.quotes = response;
+        this.quote = response;
         console.log(this.quotes);
       }
     )
   }
+
+  saveQuote(){
+    this.quoteService.addQuote(this.quotes).subscribe(
+      data => {
+        console.log (data);
+        console.log("lkdfjlkdjf")
+      }
+    )
+  }
+
+  onSubmit(){
+    console.log(this.quotes);
+    console.log("k")
+    this.saveQuote();
+    
+  }
+
+
+
+
   // private getQuotes(){
   //   this.quoteService.getQuoteList().subscribe(data => {
   //     this.quotes = data;

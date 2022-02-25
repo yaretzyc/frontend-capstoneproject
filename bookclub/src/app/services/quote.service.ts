@@ -19,7 +19,7 @@ export class QuoteService {
   }
   
   //ADD QUOTE
-  addQuote(quote: Quote): Observable<Quote> {
+  addQuote(quote: Quote): Observable<Object> {
     return this.httpClient.post<Quote>(`${this.apibaseUrl}/quote/`, quote);
   }
   

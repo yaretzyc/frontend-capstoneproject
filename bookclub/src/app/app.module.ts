@@ -7,6 +7,7 @@ import { PostComponent } from './post/post.component';
 import { QuoteComponent } from './quote/quote.component';
 import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // import {AppRoutingModule } from './app-routing.module'
 
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule
     // AppRoutingModule
 
   ],

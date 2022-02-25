@@ -1,10 +1,46 @@
 <p>quote works!</p>
 
+<div class="col-md-6 offset-md-3">
+    <h3> Create Quote </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Quote </label>
+            <input type="text" class ="form-control" id = "quo"
+                [(ngModel)] = "quotes.quote" name = "quo">
+        </div>
+    
+        <div class="form-group">
+            <label> chapter</label>
+            <input type="text" class ="form-control" id = "ch"
+                [(ngModel)] = "quotes.chapter" name = "ch">
+        </div>
+    
+        <div class="form-group">
+            <label> page </label>
+            <input type="text" class ="form-control" id = "page"
+                [(ngModel)] = "quotes.page" name = "page">
+        </div>
+
+        <div class="form-group">
+            <label> name </label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "quotes.name" name = "name">
+        </div>
+
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
+
 <p>quote list</p>
-<ul *ngFor = "let q of quotes">
+<ul *ngFor = "let q of quote">
+    
     <li>{{q.chapter}}</li>
     <li>{{q.name}}</li>
     <li>{{q.quote}}</li>
     <li>{{q.page}}</li>
     <li>{{q.id}}</li>
 </ul>
+
