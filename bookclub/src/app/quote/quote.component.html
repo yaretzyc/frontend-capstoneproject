@@ -4,24 +4,25 @@
     <h3> Create Quote </h3>
     <form (ngSubmit) = "onSubmit()">
     
-        <div class="form-group">
-            <label> Quote </label>
-            <input type="text" class ="form-control" id = "quo"
-                [(ngModel)] = "quotes.quote" name = "quo">
-        </div>
+        
     
         <div class="form-group">
             <label> chapter</label>
             <input type="text" class ="form-control" id = "ch"
-                [(ngModel)] = "quotes.chapter" name = "ch">
+                [(ngModel)] = "quotes.chapter" name = "ch" placeholder="Chapter">
         </div>
     
         <div class="form-group">
             <label> page </label>
             <input type="text" class ="form-control" id = "page"
-                [(ngModel)] = "quotes.page" name = "page">
+                [(ngModel)] = "quotes.page" name = "page" placeholder="Page">
         </div>
 
+        <div class="form-group">
+            <label> Quote </label>
+            <input type="text" class ="form-control" id = "quo"
+                [(ngModel)] = "quotes.quote" name = "quo" placeholder="Quote" >
+        </div>
         <!-- <div class="form-group">
             <label> name </label>
             <input type="text" class ="form-control" id = "name"
@@ -29,13 +30,13 @@
         </div> -->
 
     
-        <button class = "btn" type ="submit">Submit</button>
+        <button class = "btn btn-default" type ="submit">Submit</button>
     
     </form>
     </div> 
 <div class="row">
     <div *ngFor = "let q of quote" class="col-12 col-md-6 col-lg-4">
-    <div class="card card-div">
+    <div class="card">
         <div class="card-header">
           Quote
         </div>
