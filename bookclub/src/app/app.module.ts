@@ -9,7 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-// import {AppRoutingModule } from './app-routing.module'
+import {AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
@@ -22,8 +22,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
-    // AppRoutingModule
+    FormsModule,
+    AppRoutingModule
 
   ],
   providers: [],

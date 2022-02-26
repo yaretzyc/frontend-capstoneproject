@@ -1,4 +1,4 @@
-<p>quote works!</p>
+<!-- <app-nav></app-nav> -->
 
 <div class="col-md-6 offset-md-3">
     <h3> Create Quote </h3>
@@ -33,18 +33,24 @@
     
     </form>
     </div> 
-<div class="row">
+<div class="row g-4">
     <div *ngFor = "let q of quote" class="col-12 col-md-6 col-lg-4">
     <div class="card">
         <div class="card-header">
           Quote
         </div>
-        <div class="card-body">
+        <div class="card-body text-white bg-dark" >
           <blockquote class="blockquote mb-0">
             <p>{{q.quote}}</p>
             <footer class="blockquote-footer">chapter <cite title="Source Title">{{q.chapter}},</cite> page <cite title="Source Title">{{q.page}}</cite>
             </footer>
           </blockquote>
+          <div class="card-body">
+            <a href="#" class="card-link">Edit</a>
+            <a href="#" class="card-link">Delete</a>
+            <a href="#" class="card-link">View</a>
+
+          </div>
         </div>
       </div>
       </div>
