@@ -1,66 +1,88 @@
 <!-- <app-nav></app-nav> -->
 
 <div class="col-md-6 offset-md-3">
-    <h3> Create Quote </h3>
-    <form (ngSubmit) = "onSubmit()">
-    
-        
-    
-        <div class="form-group">
-            <label> chapter</label>
-            <input type="text" class ="form-control" id = "ch"
-                [(ngModel)] = "quotes.chapter" name = "ch" placeholder="Chapter">
-        </div>
-    
-        <div class="form-group">
-            <label> page </label>
-            <input type="text" class ="form-control" id = "page"
-                [(ngModel)] = "quotes.page" name = "page" placeholder="Page">
-        </div>
+  <h3>Create Quote</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label> chapter</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ch"
+        [(ngModel)]="quotes.chapter"
+        name="ch"
+        placeholder="Chapter"
+      />
+    </div>
 
-        <div class="form-group">
-            <label> Quote </label>
-            <input type="text" class ="form-control" id = "quo"
-                [(ngModel)] = "quotes.quote" name = "quo" placeholder="Quote" >
-        </div>
-        <!-- <div class="form-group">
+    <div class="form-group">
+      <label> page </label>
+      <input
+        type="text"
+        class="form-control"
+        id="page"
+        [(ngModel)]="quotes.page"
+        name="page"
+        placeholder="Page"
+      />
+    </div>
+
+    <div class="form-group">
+      <label> Quote </label>
+      <input
+        type="text"
+        class="form-control"
+        id="quo"
+        [(ngModel)]="quotes.quote"
+        name="quo"
+        placeholder="Quote"
+      />
+    </div>
+    <!-- <div class="form-group">
             <label> name </label>
             <input type="text" class ="form-control" id = "name"
                 [(ngModel)] = "quotes.name" name = "name">
         </div> -->
 
-    
-        <button class = "btn btn-default" type ="submit">Submit</button>
-    
-    </form>
-    </div> 
+    <button class="btn btn-default" type="submit">Submit</button>
+  </form>
+</div>
 <div class="row">
-    <div *ngFor = "let q of quote.slice().reverse()" class="col-12 col-md-6 col-lg-4">
+  <div
+    *ngFor="let q of quote.slice().reverse()"
+    class="col-12 col-md-6 col-lg-4"
+  >
     <div class="card">
-        <div class="card-header">
-          Quote
-        </div>
-        <div class="card-body text-white bg-dark mb-50 bot" style="padding-bottom: 0%;" >
-          <blockquote class="blockquote">
-            <p>{{q.quote}}</p>
-            <footer class="blockquote-footer">chapter <cite title="Source Title">{{q.chapter}},</cite> page <cite title="Source Title">{{q.page}}</cite>
-            </footer>
-          </blockquote>
-          <div class="card-body">
-              <button (click)="updateQuote(q.id)" class ="btn btn-info btn-css">Edit</button>
-              <button (click)="deleteQuote(q.id)" class ="btn btn-info btn-css">Delete</button>
+      <div class="card-header">Quote</div>
+      <div
+        class="card-body text-white bg-dark mb-50 bot"
+        style="padding-bottom: 0%"
+      >
+        <blockquote class="blockquote">
+          <p>{{ q.quote }}</p>
+          <footer class="blockquote-footer">
+            chapter <cite title="Source Title">{{ q.chapter }},</cite> page
+            <cite title="Source Title">{{ q.page }}</cite>
+          </footer>
+        </blockquote>
+        <div class="card-body">
+          <button (click)="updateQuote(q.id)" class="btn btn-info btn-css">
+            Edit
+          </button>
+          <button (click)="deleteQuote(q.id)" class="btn btn-info btn-css">
+            Delete
+          </button>
 
-            <!-- <a routerLink="update-quote" class="card-link">Edit</a> -->
-            <!-- <a href="#" class="card-link">Delete</a>
+          <!-- <a routerLink="update-quote" class="card-link">Edit</a> -->
+          <!-- <a href="#" class="card-link">Delete</a>
             <a href="#" class="card-link">View</a> -->
-
-          </div>
         </div>
-      </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- <div class="container">
+<!-- <div class="container">
 
         <div class="row g-20">
             <div *ngFor = "let q of quote" class="col-12 col-md-6 col-lg-4">
@@ -83,12 +105,9 @@
         </div>
     </div> -->
 
-
-
-
 <!-- <ul *ngFor = "let q of quote"> -->
-    
-    <!-- <h3>Quotes</h3>
+
+<!-- <h3>Quotes</h3>
 
     <div class="container" *ngFor="let q of quote">  
         <div class="card-deck">
@@ -102,10 +121,9 @@
     </div> -->
 
 <!-- </ul> -->
-    
-    <!-- <li>{{q.chapter}}</li> -->
-    <!-- <li>{{q.name}}</li> -->
-    <!-- <li>{{q.quote}}</li>
-    <li>{{q.page}}</li> -->
-    <!-- <li>{{q.id}}</li> -->
 
+<!-- <li>{{q.chapter}}</li> -->
+<!-- <li>{{q.name}}</li> -->
+<!-- <li>{{q.quote}}</li>
+    <li>{{q.page}}</li> -->
+<!-- <li>{{q.id}}</li> -->
