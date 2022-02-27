@@ -14,7 +14,10 @@ export class QuoteComponent implements OnInit {
   quotes: Quote = new Quote();
   // quotes: Quote[];
 
-  constructor(private quoteService: QuoteService, private router: Router) { }
+  constructor(private quoteService: QuoteService, private router: Router) { 
+    this.router.routeReuseStrategy.shouldReuseRoute = () => true;
+
+  }
 
   ngOnInit(): void {
     // this.getQuotes();
@@ -51,21 +54,22 @@ export class QuoteComponent implements OnInit {
     
   }
 
-
-
-
   // private getQuotes(){
   //   this.quoteService.getQuoteList().subscribe(data => {
   //     this.quotes = data;
   //   } )
   // }
 
-
   updateQuote(id: number){
-    console.log("kdjfkd")
     this.router.navigate(['update-quote', id]);
-    console.log("kdjfkjddjfkdjfksjdfkljds")
 
+  }
+
+  deleteQuote(qouteId:number){
+    this.quoteService.deleteQuote(qouteId).subscribe(data =>{
+      this.getQuotesList();
+
+    })
   }
   
 
