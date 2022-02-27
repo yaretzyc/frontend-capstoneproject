@@ -1,9 +1,9 @@
 export class Quote {
     
     id: number = 0;
-    chapter: number = 0;
+    chapter: any;
     name: string = "";
-    page: number = 0;
+    page: any;
     quote: string = '';
 
 

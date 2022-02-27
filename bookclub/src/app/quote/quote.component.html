@@ -35,20 +35,20 @@
     </form>
     </div> 
 <div class="row">
-    <div *ngFor = "let q of quote" class="col-12 col-md-6 col-lg-4">
+    <div *ngFor = "let q of quote.slice().reverse()" class="col-12 col-md-6 col-lg-4">
     <div class="card">
         <div class="card-header">
           Quote
         </div>
-        <div class="card-body text-white bg-dark mb-50" >
+        <div class="card-body text-white bg-dark mb-50 bot" style="padding-bottom: 0%;" >
           <blockquote class="blockquote">
             <p>{{q.quote}}</p>
             <footer class="blockquote-footer">chapter <cite title="Source Title">{{q.chapter}},</cite> page <cite title="Source Title">{{q.page}}</cite>
             </footer>
           </blockquote>
           <div class="card-body">
-              <button (click)="updateQuote(q.id)" class ="btn btn-info">Edit</button>
-              <button (click)="deleteQuote(q.id)" class ="btn btn-info">Delete</button>
+              <button (click)="updateQuote(q.id)" class ="btn btn-info btn-css">Edit</button>
+              <button (click)="deleteQuote(q.id)" class ="btn btn-info btn-css">Delete</button>
 
             <!-- <a routerLink="update-quote" class="card-link">Edit</a> -->
             <!-- <a href="#" class="card-link">Delete</a>

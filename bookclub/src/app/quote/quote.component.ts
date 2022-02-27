@@ -15,7 +15,6 @@ export class QuoteComponent implements OnInit {
   // quotes: Quote[];
 
   constructor(private quoteService: QuoteService, private router: Router) { 
-    this.router.routeReuseStrategy.shouldReuseRoute = () => true;
 
   }
 
@@ -61,11 +60,12 @@ export class QuoteComponent implements OnInit {
   // }
 
   updateQuote(id: number){
+    console.log("routing to update component")
     this.router.navigate(['update-quote', id]);
 
   }
 
-  deleteQuote(qouteId:number){
+  deleteQuote(qouteId: number){
     this.quoteService.deleteQuote(qouteId).subscribe(data =>{
       this.getQuotesList();
 

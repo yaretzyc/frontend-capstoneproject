@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Quote } from '../quote';
 import { QuoteService } from '../services/quote.service';
-import { of } from 'rxjs';
+// import { of } from 'rxjs';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class UpdateQuoteComponent implements OnInit {
 
   ngOnInit(): void {
     this.quoteId = this.route.snapshot.params['quoteId'];
-    console.log("kldjfkljdfkljsdfkljkdsjfkldjsflkj")
+    // console.log("kldjfkljdfkljsdfkljkdsjfkldjsflkj")
     this.quoteService.getOneQuote(this.quoteId).subscribe(data =>{
       // console.log("sam")
       this.quotes = data;
