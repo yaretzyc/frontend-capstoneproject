@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router'
 import { LandingComponent } from "./landing/landing.component";
 import { PostComponent } from "./post/post.component";
 import { QuoteComponent } from "./quote/quote.component";
+import { UpdateQuoteComponent } from "./update-quote/update-quote.component";
 
 const routes: Routes = [
     {
@@ -12,13 +13,17 @@ const routes: Routes = [
     },
     
     {
-        path: 'qoutes',
+        path: 'quotes',
         component: QuoteComponent
     },
 
     {
         path: 'post',
         component: PostComponent
+    },
+    {
+        path:'update-quote/:quoteId',
+        component: UpdateQuoteComponent
     }
 
 ]

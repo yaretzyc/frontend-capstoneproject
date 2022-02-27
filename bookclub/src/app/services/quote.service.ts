@@ -24,9 +24,9 @@ export class QuoteService {
   }
   
   // //UPDATE QUOTE
-  // updateQuote(quoteId: number): Observable<Quote>{
-  //   return this.httpClient.put<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`, quote);
-  // }
+  updateQuote(quoteId:number, quote: Quote ): Observable<Object>{
+    return this.httpClient.put<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`, quote);
+  }
 
   //DELETE QUOTE
   deleteQuote(quoteId: number): Observable<void>{
@@ -35,4 +35,8 @@ export class QuoteService {
 
 
   //GET ONE QUOTE: 
+  getOneQuote(quoteId: number): Observable<Quote>{
+    return this.httpClient.get<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`);
+  }
+ 
 }

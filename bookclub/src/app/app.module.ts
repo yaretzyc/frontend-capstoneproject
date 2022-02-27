@@ -9,7 +9,9 @@ import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import {AppRoutingModule } from './app-routing.module'
+
+import {AppRoutingModule } from './app-routing.module';
+import { UpdateQuoteComponent } from './update-quote/update-quote.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {AppRoutingModule } from './app-routing.module'
     NavComponent,
     PostComponent,
     QuoteComponent,
-    LandingComponent
+    LandingComponent,
+    UpdateQuoteComponent
   ],
   imports: [
     BrowserModule,

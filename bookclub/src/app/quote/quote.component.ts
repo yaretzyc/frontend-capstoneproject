@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Quote } from '../quote';
 import { QuoteService } from '../services/quote.service';
 
@@ -13,7 +14,7 @@ export class QuoteComponent implements OnInit {
   quotes: Quote = new Quote();
   // quotes: Quote[];
 
-  constructor(private quoteService: QuoteService) { }
+  constructor(private quoteService: QuoteService, private router: Router) { }
 
   ngOnInit(): void {
     // this.getQuotes();
@@ -58,5 +59,14 @@ export class QuoteComponent implements OnInit {
   //     this.quotes = data;
   //   } )
   // }
+
+
+  updateQuote(id: number){
+    console.log("kdjfkd")
+    this.router.navigate(['update-quote', id]);
+    console.log("kdjfkjddjfkdjfksjdfkljds")
+
+  }
+  
 
 }
