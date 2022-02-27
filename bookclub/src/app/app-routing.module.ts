@@ -5,7 +5,7 @@ import { LandingComponent } from "./landing/landing.component";
 import { PostComponent } from "./post/post.component";
 import { QuoteComponent } from "./quote/quote.component";
 import { UpdateQuoteComponent } from "./update-quote/update-quote.component";
-
+import { EditPostComponent } from "./edit-post/edit-post.component";
 const routes: Routes = [
     {
         path: '',
@@ -24,6 +24,10 @@ const routes: Routes = [
     {
         path:'update-quote/:quoteId',
         component: UpdateQuoteComponent
+    },
+    {
+        path: 'update-post/:postId',
+        component: EditPostComponent
     }
 
 ]

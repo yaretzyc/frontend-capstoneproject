@@ -5,8 +5,8 @@ export class Post {
     name: string = '';
     body: string = '';
     page: any;
-    LocalDate: any;
-    LocalDateTime: any;
+    date: any;
+    dateTime: any;
 
 
 

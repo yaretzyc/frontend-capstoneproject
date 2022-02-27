@@ -13,29 +13,29 @@ export class PostService {
   private apibaseUrl = environment.baseUrl;
   constructor(private httpClient: HttpClient) { }
 
-    //GET ALL QUOTES
-    getQuoteList(): Observable<Post[]>{
-      return this.httpClient.get<Post[]>(`${this.apibaseUrl}/quotes/`);
+    //GET ALL Posts
+    getPostList(): Observable<Post[]>{
+      return this.httpClient.get<Post[]>(`${this.apibaseUrl}/posts/`);
     }
     
     //ADD Post
-    addQuote(Post: Post): Observable<Object> {
-      return this.httpClient.post<Post>(`${this.apibaseUrl}/Post/`, Post);
+    addPost(Post: Post): Observable<Object> {
+      return this.httpClient.post<Post>(`${this.apibaseUrl}/post/`, Post);
     }
     
     // //UPDATE Post
-    updateQuote(postId:number, Post: Post ): Observable<Object>{
-      return this.httpClient.put<Post>(`${this.apibaseUrl}/Post/${postId}/`, Post);
+    updatePost(postId:number, Post: Post ): Observable<Object>{
+      return this.httpClient.put<Post>(`${this.apibaseUrl}/post/${postId}/`, Post);
     }
   
     //DELETE Post
-    deleteQuote(postId: number): Observable<void>{
-      return this.httpClient.delete<void>(`${this.apibaseUrl}/Post/${postId}/`);
+    deletePost(postId: number): Observable<void>{
+      return this.httpClient.delete<void>(`${this.apibaseUrl}/post/${postId}/`);
     }
   
   
     //GET ONE Post: 
-    getOneQuote(postId: number): Observable<Post>{
-      return this.httpClient.get<Post>(`${this.apibaseUrl}/Post/${postId}/`);
+    getOnePost(postId: number): Observable<Post>{
+      return this.httpClient.get<Post>(`${this.apibaseUrl}/post/${postId}/`);
     }
 }

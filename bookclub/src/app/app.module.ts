@@ -11,7 +11,8 @@ import { FormsModule } from '@angular/forms';
 
 
 import {AppRoutingModule } from './app-routing.module';
-import { UpdateQuoteComponent } from './update-quote/update-quote.component'
+import { UpdateQuoteComponent } from './update-quote/update-quote.component';
+import { EditPostComponent } from './edit-post/edit-post.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UpdateQuoteComponent } from './update-quote/update-quote.component'
     PostComponent,
     QuoteComponent,
     LandingComponent,
-    UpdateQuoteComponent
+    UpdateQuoteComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
