@@ -50,6 +50,8 @@ export class QuoteComponent implements OnInit {
     console.log(this.quotes);
     console.log("k")
     this.saveQuote();
+    // window.location.reload();
+
     
   }
 
