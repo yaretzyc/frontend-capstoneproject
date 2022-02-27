@@ -20,28 +20,28 @@ export class BookService {
 
   
     //GET ALL Books
-    getPostList(): Observable<Book[]>{
+    getBookList(): Observable<Book[]>{
       return this.httpClient.get<Book[]>(`${this.apibaseUrl}/books/`);
     }
     
     //ADD Book
-    addPost(Book: Book): Observable<Object> {
+    addBook(Book: Book): Observable<Object> {
       return this.httpClient.post<Book>(`${this.apibaseUrl}/book/`, Book);
     }
     
     // //UPDATE Book
-    updatePost(postId:number, Book: Book ): Observable<Object>{
+    updateBook(postId:number, Book: Book ): Observable<Object>{
       return this.httpClient.put<Book>(`${this.apibaseUrl}/book/${postId}/`, Book);
     }
   
     //DELETE Book
-    deletePost(postId: number): Observable<void>{
+    deleteBook(postId: number): Observable<void>{
       return this.httpClient.delete<void>(`${this.apibaseUrl}/book/${postId}/`);
     }
   
   
     //GET ONE Book: 
-    getOnePost(postId: number): Observable<Book>{
+    getOneBook(postId: number): Observable<Book>{
       return this.httpClient.get<Book>(`${this.apibaseUrl}/book/${postId}/`);
     }
 }
