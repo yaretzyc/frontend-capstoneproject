@@ -42,6 +42,7 @@ export class QuoteComponent implements OnInit {
       data => {
         console.log (data);
         console.log("lkdfjlkdjf")
+        this.getQuotesList();
       }
     )
   }

@@ -10,9 +10,10 @@ import { BookService } from '../services/book.service';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
-  
   books: Array<Book> = [];
   book: Book = new Book();
+  // title: any=this.books[-1].title;
+  // title: string = "dklfjdlk"
 
   constructor(private bookService: BookService, private router: Router) { }
 

@@ -2,7 +2,8 @@
 
 <div class="col-md-6 offset-md-3">
   <h3>Create Quote</h3>
-  <form (ngSubmit)="onSubmit()">
+  <!-- TO RESET FORM: https://www.youtube.com/watch?v=gfSwvsqUv84&ab_channel=kudvenkat -->
+  <form #submitForm = "ngForm" (ngSubmit)="onSubmit(); submitForm.reset()">
     <div class="form-group">
       <label> chapter</label>
       <input
