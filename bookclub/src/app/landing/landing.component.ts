@@ -36,6 +36,7 @@ export class LandingComponent implements OnInit {
     this.bookService.addBook(this.book).subscribe(
       data => {
         console.log (data);
+        this.getBookList();
       }
     )
   }

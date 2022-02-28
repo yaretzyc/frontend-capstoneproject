@@ -34,7 +34,7 @@ export class PostComponent implements OnInit {
     this.postService.addPost(this.posts).subscribe(
       data => {
         console.log (data);
-        console.log("lkdfjlkdjf")
+        this.getPostList();
       }
     )
   }
