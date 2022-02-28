@@ -1,11 +1,22 @@
 <!-- <app-nav></app-nav> -->
 
 <div class="col-md-6 offset-md-3">
-  <h3>Create Quote</h3>
+  <h3>Quote</h3>
   <!-- TO RESET FORM: https://www.youtube.com/watch?v=gfSwvsqUv84&ab_channel=kudvenkat -->
   <form #submitForm = "ngForm" (ngSubmit)="onSubmit(); submitForm.reset()">
+     <div class="form-group">
+      <!-- <label> Quote </label> -->
+      <input
+        type="text"
+        class="form-control"
+        id="quo"
+        [(ngModel)]="quotes.quote"
+        name="quo"
+        placeholder="Quote"
+      />
+    </div>
     <div class="form-group">
-      <label> chapter</label>
+      <!-- <label> </label> -->
       <input
         type="text"
         class="form-control"
@@ -17,7 +28,7 @@
     </div>
 
     <div class="form-group">
-      <label> page </label>
+      <!-- <label> page </label> -->
       <input
         type="text"
         class="form-control"
@@ -28,17 +39,7 @@
       />
     </div>
 
-    <div class="form-group">
-      <label> Quote </label>
-      <input
-        type="text"
-        class="form-control"
-        id="quo"
-        [(ngModel)]="quotes.quote"
-        name="quo"
-        placeholder="Quote"
-      />
-    </div>
+   
     <!-- <div class="form-group">
             <label> name </label>
             <input type="text" class ="form-control" id = "name"
