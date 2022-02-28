@@ -8,7 +8,8 @@ a{
 }
 
 a:hover{
-    color:#e74c3c;
+    color: black;
+    font-weight: bolder;
 }
 
 .container-fluid{
@@ -34,4 +35,8 @@ a:hover{
     font-family: BrandonGrotesque, sans-serif;
     display: block;
     margin-bottom: 20px;
+}
+#site-title:hover{
+    font-weight: bolder;
+    color: #732C2C;
 }
