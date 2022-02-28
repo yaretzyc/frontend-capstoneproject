@@ -13,8 +13,6 @@ export class EditBookDetailsComponent implements OnInit {
   bookId: any;
   book: Book = new Book();
 
-
-
   constructor(private bookService: BookService, private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit(): void {

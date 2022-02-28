@@ -1,31 +1,33 @@
- <p>update-quote works!</p>
-
+<div class="container">
 <div class="col-md-6 offset-md-3">
     <h3> Edit Quote </h3>
     <form (ngSubmit) = "onSubmit()">
     <!--  -->
         
-    
+    <div class="form-group">
+            <label> Quote </label>
+            <input type="text" class ="form-control" id = "quo"
+                [(ngModel)] = "quotes.quote" name = "quo" placeholder="Quote" >
+        </div>
+
         <div class="form-group">
-            <label> chapter</label>
+            <label> Chapter </label>
             <input type="text" class ="form-control" id = "ch"
                 [(ngModel)] = "quotes.chapter" name = "ch" placeholder="Chapter">
         </div>
     
         <div class="form-group">
-            <label> page </label>
+            <label> Page </label>
             <input type="text" class ="form-control" id = "page"
                 [(ngModel)] = "quotes.page" name = "page" placeholder="Page">
         </div>
 
-        <div class="form-group">
-            <label> Quote </label>
-            <input type="text" class ="form-control" id = "quo"
-                [(ngModel)] = "quotes.quote" name = "quo" placeholder="Quote" >
-        </div>
+        
 
     
         <button class = "btn btn-default" type ="submit">Submit</button>
     
     </form>
     </div>  
+
+</div>
