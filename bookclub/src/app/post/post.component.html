@@ -47,24 +47,24 @@
       />
     </div> -->
 
-    <button class="btn btn-default" type="submit">Submit</button>
+    <button class="btn btn-dark" type="submit">Submit</button>
   </form>
 </div>
 
 <div class="row">
   <div *ngFor="let p of post.slice().reverse()" class="col-12 col-md-6 col-lg-4">
     <div class="card">
-      <div class="card-header">Featured</div>
+      <div class="card-header">Page: {{p.page}}</div>
       <div class="card-body">
-        <h5 class="card-title">{{ p.body }}</h5>
+        <h5 class="card-title">{{ p.title }}</h5>
         <p class="card-text">
-          With supporting text below as a natural lead-in to additional content.
+          {{ p.body }}
         </p>
         <div class="card-body">
-          <button (click)="updatePost(p.id)" class="btn btn-info btn-css">
+          <button (click)="updatePost(p.id)" class="btn btn-light btn-css">
             Edit
           </button>
-          <button (click)="deletePost(p.id)" class="btn btn-info btn-css">
+          <button (click)="deletePost(p.id)" class="btn btn-warning btn-css">
             Delete
           </button>
           </div>
