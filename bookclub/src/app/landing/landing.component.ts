@@ -26,7 +26,7 @@ export class LandingComponent implements OnInit {
     this.bookService.getBookList().subscribe(
       (response: Book[]) =>{
         this.books = response;
-        console.log(this.books);
+        // console.log(this.books);
       }
     )
   }
@@ -35,14 +35,14 @@ export class LandingComponent implements OnInit {
   saveBook(){
     this.bookService.addBook(this.book).subscribe(
       data => {
-        console.log (data);
+        // console.log (data);
         this.getBookList();
       }
     )
   }
 
   onSubmit(){
-    console.log(this.book);
+    // console.log(this.book);
     this.saveBook();
     
   }

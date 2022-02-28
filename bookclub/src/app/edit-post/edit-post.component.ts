@@ -19,7 +19,7 @@ export class EditPostComponent implements OnInit {
     this.postId = this.route.snapshot.params['postId'];
     this.postService.getOnePost(this.postId).subscribe(data =>{
       this.post = data;
-      console.log(data);
+      // console.log(data);
     })
 
   }

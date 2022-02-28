@@ -32,7 +32,7 @@ export class QuoteComponent implements OnInit {
     this.quoteService.getQuoteList().subscribe(
       (response: Quote[]) =>{
         this.quote = response;
-        console.log(this.quotes);
+        // console.log(this.quotes);
       }
     )
   }
@@ -40,16 +40,16 @@ export class QuoteComponent implements OnInit {
   saveQuote(){
     this.quoteService.addQuote(this.quotes).subscribe(
       data => {
-        console.log (data);
-        console.log("lkdfjlkdjf")
+        // console.log (data);
+        // console.log("lkdfjlkdjf")
         this.getQuotesList();
       }
     )
   }
 
   onSubmit(){
-    console.log(this.quotes);
-    console.log("k")
+    // console.log(this.quotes);
+    // console.log("k")
     this.saveQuote();
     // window.location.reload();
 
@@ -63,7 +63,7 @@ export class QuoteComponent implements OnInit {
   // }
 
   updateQuote(id: number){
-    console.log("routing to update component")
+    // console.log("routing to update component")
     this.router.navigate(['update-quote', id]);
 
   }

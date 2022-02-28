@@ -24,7 +24,7 @@ export class PostComponent implements OnInit {
     this.postService.getPostList().subscribe(
       (response: Post[]) =>{
         this.post = response;
-        console.log(this.posts);
+        // console.log(this.posts);
       }
     )
   }
@@ -33,14 +33,14 @@ export class PostComponent implements OnInit {
   savePost(){
     this.postService.addPost(this.posts).subscribe(
       data => {
-        console.log (data);
+        // console.log (data);
         this.getPostList();
       }
     )
   }
 
   onSubmit(){
-    console.log(this.posts);
+    // console.log(this.posts);
     this.savePost();
     
   }
@@ -52,7 +52,7 @@ export class PostComponent implements OnInit {
   // }
 
   updatePost(postId: number){
-    console.log("routing to update component")
+    // console.log("routing to update component")
     this.router.navigate(['update-post', postId]);
 
   }

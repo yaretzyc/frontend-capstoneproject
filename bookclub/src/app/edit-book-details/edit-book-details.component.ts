@@ -19,7 +19,7 @@ export class EditBookDetailsComponent implements OnInit {
     this.bookId = this.route.snapshot.params['bookId'];
     this.bookService.getOneBook(this.bookId).subscribe(data =>{
       this.book = data;
-      console.log(data);
+      // console.log(data);
     })
 
   }

@@ -11,6 +11,27 @@ a:hover{
     color:#e74c3c;
 }
 
-/* .container-fluid{
-    margin-right: 39px;
-} */
+.container-fluid{
+    padding-right: 50px;
+}
+
+.the {
+    text-transform: lowercase;
+    font-family: BrandonGrotesque, sans-serif;
+    font-size: 36px;
+    position: relative;
+    top: -30px;
+    border-bottom: 10px solid #fff;
+}
+
+
+#site-title {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: BrandonGrotesque, sans-serif;
+    display: block;
+    margin-bottom: 20px;
+}
