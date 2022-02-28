@@ -16,13 +16,14 @@
 <!-- HERE THE BOOK OF THE MONTH GOES AND THEN THE CARDS IN THE BOTTOM -->
 <div style="height: 100px; width: 100px; background-color: black;">
 
-
+<!-- <img src="{{b.img: b.title === the Way Of Kings}}" alt=""> -->
 
 
 </div>
+<!-- https://getbootstrap.com/docs/5.0/components/card/ -->
+<div class="row">
 
-<div
-*ngFor="let b of books.slice().reverse()"
+<div *ngFor="let b of books.slice().reverse()"
 class="col-12 col-md-6 col-lg-4"
 >
     
@@ -31,6 +32,7 @@ class="col-12 col-md-6 col-lg-4"
     <div class="card-body">
       <h5 class="card-title">{{b.title}}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. {{b.summary}}</p>
+      <!-- <p>{{b.id}}</p> -->
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Author: {{b.author}}</li>
@@ -38,10 +40,18 @@ class="col-12 col-md-6 col-lg-4"
       <li class="list-group-item">Length: {{b.pages}} pg</li>
     </ul>
     <div class="card-body">
-      <a href="#" class="card-link">Delete</a>
-      <a href="#" class="card-link">Edit</a>
+      <!-- <a href="#" class="card-link">Delete</a>
+      <a href="#" class="card-link">Edit</a> -->
+        <button (click)="updateBook(b.id)" class="btn btn-info btn-css">
+          Edit
+        </button>
+        <button (click)="deleteBook(b.id)" class="btn btn-info btn-css">
+          Delete
+        </button>
+
     </div>
   </div>
+</div>
 </div>
 
 

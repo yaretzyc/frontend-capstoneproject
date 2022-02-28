@@ -49,8 +49,7 @@ export class LandingComponent implements OnInit {
 
 
   updateBook(bookId: number){
-    this.router.navigate(['update-book', bookId]);
-
+    this.router.navigate(['edit-book', bookId]);
   }
 
   deleteBook(bookId: number){

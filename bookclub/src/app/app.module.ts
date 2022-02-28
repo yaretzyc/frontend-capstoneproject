@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 
 import {AppRoutingModule } from './app-routing.module';
 import { UpdateQuoteComponent } from './update-quote/update-quote.component';
-import { EditPostComponent } from './edit-post/edit-post.component'
+import { EditPostComponent } from './edit-post/edit-post.component';
+import { EditBookDetailsComponent } from './edit-book-details/edit-book-details.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EditPostComponent } from './edit-post/edit-post.component'
     QuoteComponent,
     LandingComponent,
     UpdateQuoteComponent,
-    EditPostComponent
+    EditPostComponent,
+    EditBookDetailsComponent
   ],
   imports: [
     BrowserModule,
