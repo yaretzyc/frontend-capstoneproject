@@ -17,6 +17,13 @@
 }
 
 .container{
-    background-color: #694F5D;
+    background-color: whitesmoke;
+    padding: 0px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-top: 20px;
 }
+
 
