@@ -50,15 +50,15 @@
     *ngFor="let q of quote.slice().reverse()"
     class="col-12 col-md-6 col-lg-4"
   >
-    <div class="card">
+    <div class="card text-white bg-dark mb-3">
       <div class="card-header">Quote</div>
       <div
-        class="card-body text-white bg-dark mb-50 bot"
+        class="card-body "
         style="padding-bottom: 0%"
       >
         <blockquote class="blockquote">
           <p>{{ q.quote }}</p>
-          <footer class="blockquote-footer">
+          <footer class="blockquote-footer text-white">
             chapter <cite title="Source Title">{{ q.chapter }},</cite> page
             <cite title="Source Title">{{ q.page }}</cite>
           </footer>
