@@ -1,6 +1,9 @@
 .header{
     margin-bottom: 35px;
 }
+.nav{
+    height: 80px;
+}
 a{
     text-decoration: none;
     color:rgba(34,54,69,.7);
@@ -14,6 +17,7 @@ a:hover{
 
 .container-fluid{
     padding-right: 50px;
+    background-color: #397367;
 }
 
 .the {
@@ -28,6 +32,7 @@ a:hover{
 
 #site-title {
     margin-top: 30px;
+    color: #397367;
     text-align: center;
     font-size: 60px;
     letter-spacing: 3px;
@@ -38,5 +43,5 @@ a:hover{
 }
 #site-title:hover{
     font-weight: bolder;
-    color: #732C2C;
+    color: #856A5D;
 }
