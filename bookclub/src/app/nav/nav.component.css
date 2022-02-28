@@ -45,3 +45,9 @@ a:hover{
     font-weight: bolder;
     color: #856A5D;
 }
+
+/* @media all and (max-width: 990px){
+    img{
+        padding-bottom: 25px;
+    }
+} */

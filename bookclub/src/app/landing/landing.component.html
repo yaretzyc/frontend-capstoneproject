@@ -1,16 +1,10 @@
-
-
 <!-- https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg1.imagesbn.com%2Fp%2F9781429992800_p0_v4_s260x420.JPG&f=1&nofb=1 -->
 
 <!-- HERE THE BOOK OF THE MONTH GOES AND THEN THE CARDS IN THE BOTTOM -->
 
-
-<div style="height: 100px; width: 100px; background-color: black;">
-
-<!-- <img src="{{b.img: b.title === the Way Of Kings}}" alt=""> -->
-
-
-</div>
+<!-- 
+<div class="" style="height: 100px; width: 100px; background-color: black;">
+</div> -->
 
 
 
@@ -21,7 +15,7 @@
 class="col-12 col-md-6 col-lg-4"
 >
     
-<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+<div class="card text-white bg-dark " style="width: 18rem;">
     <img src="{{b.img}}" class="card-img-top rounded mx-auto d-block" alt="image of the book {{b.title}}">
     <div class="card-body">
       <h5 class="card-title">{{b.title}}</h5>
@@ -34,8 +28,6 @@ class="col-12 col-md-6 col-lg-4"
       <li class="list-group-item text-white bg-dark">Length: {{b.pages}} pg</li>
     </ul>
     <div class="card-body">
-      <!-- <a href="#" class="card-link">Delete</a>
-      <a href="#" class="card-link">Edit</a> -->
         <button (click)="updateBook(b.id)" class="btn btn-light btn-css">
           Edit
         </button>
