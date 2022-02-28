@@ -1,1 +1,72 @@
-<p>edit-book-details works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3>Edit Book Details</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label> Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="book.title"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label> Author </label>
+        <input
+          type="text"
+          class="form-control"
+          id="author"
+          [(ngModel)]="book.author"
+          name="author"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label> Summary </label>
+        <input
+          type="text"
+          class="form-control"
+          id="summary"
+          [(ngModel)]="book.summary"
+          name="summary"
+        />
+      </div>
+
+      <div class="form-group">
+        <label> Genre </label>
+        <input
+          type="text"
+          class="form-control"
+          id="genre"
+          [(ngModel)]="book.genre"
+          name="genre"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label> Pages </label>
+        <input
+          type="text"
+          class="form-control"
+          id="pages"
+          [(ngModel)]="book.pages"
+          name="pages"
+        />
+      </div>
+
+      <div class="form-group">
+        <label> Image </label>
+        <input
+          type="text"
+          class="form-control"
+          id="img"
+          [(ngModel)]="book.img"
+          name="img"
+        />
+      </div>
+
+      <button class="btn btn-default" type="submit">Submit</button>
+  </form>
+</div>

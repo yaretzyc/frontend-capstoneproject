@@ -6,6 +6,7 @@ import { PostComponent } from "./post/post.component";
 import { QuoteComponent } from "./quote/quote.component";
 import { UpdateQuoteComponent } from "./update-quote/update-quote.component";
 import { EditPostComponent } from "./edit-post/edit-post.component";
+import { EditBookDetailsComponent } from "./edit-book-details/edit-book-details.component";
 const routes: Routes = [
     {
         path: '',
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
         path: 'update-post/:postId',
         component: EditPostComponent
+    },
+    {
+        path:'edit-book/:bookId',
+        component: EditBookDetailsComponent
     }
 
 ]
