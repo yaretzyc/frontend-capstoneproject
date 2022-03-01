@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from '../services/post.service';
 import { Post } from '../post';
+import { Book } from '../book';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-post',
@@ -10,18 +13,48 @@ import { Post } from '../post';
 })
 export class PostComponent implements OnInit {
 
-  post: Array<Post>=[];
-  posts: Post = new Post();
 
-  constructor(private postService: PostService, private router:Router ) { }
+  post: Array<Post>=[]; //post generates all the posts for that one book id
+  posts: Post = new Post(); //onsubmit creates new post
+  // bookId: number= 4;
+  // bookId: number = Book["id"];
+  // bookId: any = Book;
+  // bookId :any;
+  // books: any = Book;
+  bookId: number= this.route.snapshot.params['bookId'] ;
+
+  private apibaseUrl = environment.baseUrl;
+
+  constructor(private postService: PostService, private router:Router, private route: ActivatedRoute,
+    private http: HttpClient ) { }
 
 
   ngOnInit(): void {
     this.getPostList();
+    // this.getList(this.)
+    // this.bookId = this.route.snapshot.params['bookId']
+    
+
+    // this.route.paramMap
+    // .subscribe(p => {
+    //   this.bookId = Book.find(b => {  
+    //     return b.id === parseInt(p.get('id') || '', 10) //|| city.name === (p.get('name') || '') ;       
+    //   });
+    // });
+  
   }
 
+
+  // getList(){
+  //   this.http
+  //   .get(`${this.apibaseUrl}/book/${bookId}/posts/`)
+  //   .subscribe((resp) => {
+  //     this.book = resp;
+  //   })
+  // }
+
   getPostList():void{
-    this.postService.getPostList().subscribe(
+    this.postService.getPostList(this.bookId).subscribe(
       (response: Post[]) =>{
         this.post = response;
         // console.log(this.posts);
@@ -30,19 +63,22 @@ export class PostComponent implements OnInit {
   }
 
 
-  savePost(){
-    this.postService.addPost(this.posts).subscribe(
-      data => {
-        // console.log (data);
-        this.getPostList();
-      }
-    )
-  }
+  // savePost(){
+  //   this.postService.addPost(this.posts, this.bookId).subscribe(
+  //     data => {
+  //       // console.log (data);
+  //       this.getPostList();
+  //     })
+  // }
 
   onSubmit(){
     // console.log(this.posts);
-    this.savePost();
-    
+    // this.savePost();
+    this.postService.addPost(this.posts, this.bookId).subscribe(
+      data => {
+        // console.log (data);
+        this.getPostList();
+      })
   }
 
   // private getQuotes(){
@@ -53,12 +89,14 @@ export class PostComponent implements OnInit {
 
   updatePost(postId: number){
     // console.log("routing to update component")
-    this.router.navigate(['update-post', postId]);
+    // this.router.navigate([`book/${this.bookId}/update-post`, postId]);
+    this.router.navigate([`book/${this.bookId}/update-post/`, postId]);
+
 
   }
 
   deletePost(postId: number){
-    this.postService.deletePost(postId).subscribe(data =>{
+    this.postService.deletePost(postId, this.bookId).subscribe(data =>{
       this.getPostList();
     })
   }

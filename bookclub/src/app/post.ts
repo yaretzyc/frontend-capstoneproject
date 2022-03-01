@@ -7,6 +7,7 @@ export class Post {
     page: any;
     date: any;
     dateTime: any;
+    bookId: number = 0;
 
 
 

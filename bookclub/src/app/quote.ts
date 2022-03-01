@@ -5,6 +5,8 @@ export class Quote {
     name: string = "";
     page: any;
     quote: string = '';
+    bookId: number = 0;
+
 
 
 }
