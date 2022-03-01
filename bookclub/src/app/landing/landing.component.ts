@@ -28,6 +28,11 @@ export class LandingComponent implements OnInit {
 
 
   }
+  quoteList(bookId: number){
+    this.router.navigate([`book/${bookId}/quotes`]);
+
+
+  }
 
   getBookList():void{
     this.bookService.getBookList().subscribe(

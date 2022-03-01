@@ -14,7 +14,8 @@ import {AppRoutingModule } from './app-routing.module';
 import { UpdateQuoteComponent } from './update-quote/update-quote.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { EditBookDetailsComponent } from './edit-book-details/edit-book-details.component';
-import { AllPostsComponent } from './all-posts/all-posts.component'
+import { AllPostsComponent } from './all-posts/all-posts.component';
+import { AllQuotesComponent } from './all-quotes/all-quotes.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AllPostsComponent } from './all-posts/all-posts.component'
     UpdateQuoteComponent,
     EditPostComponent,
     EditBookDetailsComponent,
-    AllPostsComponent
+    AllPostsComponent,
+    AllQuotesComponent
   ],
   imports: [
     BrowserModule,

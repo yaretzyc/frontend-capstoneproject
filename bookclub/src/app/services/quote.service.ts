@@ -14,29 +14,48 @@ export class QuoteService {
 
 
   //GET ALL QUOTES
-  getQuoteList(): Observable<Quote[]>{
+  allQuotes(): Observable<Quote[]>{
     return this.httpClient.get<Quote[]>(`${this.apibaseUrl}/quotes/`);
+  }
+  //GETALL QUOTES FROM BOOK
+  getQuoteList(bookId: number): Observable<Quote[]>{
+    return this.httpClient.get<Quote[]>(`${this.apibaseUrl}/book/${bookId}/quotes`)
   }
   
   //ADD QUOTE
-  addQuote(quote: Quote): Observable<Object> {
-    return this.httpClient.post<Quote>(`${this.apibaseUrl}/quote/`, quote);
+  // addQuote(quote: Quote): Observable<Object> {
+  //   return this.httpClient.post<Quote>(`${this.apibaseUrl}/quote/`, quote);
+  // }
+  addQuote(bookId: number, Quote: Quote): Observable<Object>{
+    return this.httpClient.post<Quote>(`${this.apibaseUrl}/book/${bookId}/quote/`, Quote);
   }
   
+
+
   // //UPDATE QUOTE
-  updateQuote(quoteId:number, quote: Quote ): Observable<Object>{
-    return this.httpClient.put<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`, quote);
+  // updateQuote(quoteId:number, quote: Quote ): Observable<Object>{
+  //   return this.httpClient.put<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`, quote);
+  // }
+
+  updateQuote(bookId: number, quoteId: number, Quote: Quote): Observable<Object>{
+    return this.httpClient.put<Quote>(`${this.apibaseUrl}/book/${bookId}/quote/${quoteId}/`, Quote);
   }
 
   //DELETE QUOTE
-  deleteQuote(quoteId: number): Observable<void>{
-    return this.httpClient.delete<void>(`${this.apibaseUrl}/quote/${quoteId}/`);
+  // deleteQuote(quoteId: number): Observable<void>{
+  //   return this.httpClient.delete<void>(`${this.apibaseUrl}/quote/${quoteId}/`);
+  // }
+  deleteQuote(bookId: number, quoteId: number): Observable<void>{
+    return this.httpClient.delete<void>(`${this.apibaseUrl}/book/${bookId}/quote/${quoteId}/`);
   }
 
-
   //GET ONE QUOTE: 
-  getOneQuote(quoteId: number): Observable<Quote>{
-    return this.httpClient.get<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`);
+  // getOneQuote(quoteId: number): Observable<Quote>{
+  //   return this.httpClient.get<Quote>(`${this.apibaseUrl}/quote/${quoteId}/`);
+  // }
+
+  getOneQuote(bookId: number, quoteId: number): Observable<Quote>{
+    return this.httpClient.get<Quote>(`${this.apibaseUrl}/book/${bookId}/quote/${quoteId}/`);
   }
  
 }
