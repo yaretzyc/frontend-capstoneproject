@@ -13,6 +13,10 @@ export class PostService {
   private apibaseUrl = environment.baseUrl;
   constructor(private httpClient: HttpClient) { }
 
+    getAllPosts(): Observable<Post[]>{
+      return this.httpClient.get<Post[]>(`${this.apibaseUrl}/posts/`);
+    }
+
     //GET ALL Posts
     getPostList(bookId: number): Observable<Post[]>{
       return this.httpClient.get<Post[]>(`${this.apibaseUrl}/book/${bookId}/posts/`);

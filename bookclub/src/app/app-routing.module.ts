@@ -7,6 +7,7 @@ import { QuoteComponent } from "./quote/quote.component";
 import { UpdateQuoteComponent } from "./update-quote/update-quote.component";
 import { EditPostComponent } from "./edit-post/edit-post.component";
 import { EditBookDetailsComponent } from "./edit-book-details/edit-book-details.component";
+import { AllPostsComponent } from "./all-posts/all-posts.component";
 const routes: Routes = [
     {
         path: '',
@@ -41,6 +42,10 @@ const routes: Routes = [
     {
         path:'edit-book/:bookId',
         component: EditBookDetailsComponent
+    },
+    {
+        path: 'posts',
+        component: AllPostsComponent
     }
     // {
     //     path: '',
