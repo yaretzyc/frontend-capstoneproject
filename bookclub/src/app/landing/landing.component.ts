@@ -21,6 +21,13 @@ export class LandingComponent implements OnInit {
     this.getBookList();
   }
 
+  postList(bookId: number){
+    // this.router.navigate(['book/:bookId/post', bookId]);
+    // this.router.navigate([`book/${bookId}/posts`]);
+    this.router.navigate(['book', bookId]);
+
+
+  }
 
   getBookList():void{
     this.bookService.getBookList().subscribe(

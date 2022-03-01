@@ -1,43 +1,22 @@
 <div class="container">
-<div class="col-md-6 offset-md-3">
-  <h3>Post</h3>
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <!-- <label> Title</label> -->
-      <input
-        type="text"
-        class="form-control"
-        id="title"
-        [(ngModel)]="posts.title"
-        name="title"
-        placeholder="Title"
-      />
-    </div>
+  <div class="col-md-6 offset-md-3">
+    <h3>Post</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <!-- <label> Title</label> -->
+        <input type="text" class="form-control" id="title" [(ngModel)]="posts.title" name="title" placeholder="Title" />
+      </div>
 
-    <div class="form-group">
-      <!-- <label> Body </label> -->
-      <input
-        type="text"
-        class="form-control"
-        id="body"
-        [(ngModel)]="posts.body"
-        name="body"
-        placeholder="Post"
-      />
-    </div>
+      <div class="form-group">
+        <!-- <label> Body </label> -->
+        <input type="text" class="form-control" id="body" [(ngModel)]="posts.body" name="body" placeholder="Post" />
+      </div>
 
-    <div class="form-group">
-      <!-- <label> page </label> -->
-      <input
-        type="text"
-        class="form-control"
-        id="page"
-        [(ngModel)]="posts.page"
-        name="page"
-        placeholder="Page"
-      />
-    </div>
-    <!-- <div class="form-group">
+      <div class="form-group">
+        <!-- <label> page </label> -->
+        <input type="text" class="form-control" id="page" [(ngModel)]="posts.page" name="page" placeholder="Page" />
+      </div>
+      <!-- <div class="form-group">
       <label> date </label>
       <input
         type="text"
@@ -48,13 +27,15 @@
       />
     </div> -->
 
-    <button class="btn btn-dark" type="submit">Submit</button>
-  </form>
-</div>
+      <button class="btn btn-dark" type="submit">Submit</button>
+    </form>
+  </div>
 </div>
 
 <div class="row">
+  <!-- <div *ngFor="let p of post.slice().reverse()" class="col-12 col-md-6 col-lg-4"> -->
   <div *ngFor="let p of post.slice().reverse()" class="col-12 col-md-6 col-lg-4">
+
     <div class="card text-white bg-dark mb-3">
       <div class="card-header bg-white text-dark">Page: {{p.page}}</div>
       <div class="card-body">
@@ -69,12 +50,10 @@
           <button (click)="deletePost(p.id)" class="btn btn-warning btn-css">
             Delete
           </button>
-          </div>
-          <!-- <a href="#" class="btn btn-primary">edit</a>
-        <a routerLink=""></a> -->
         </div>
+        <!-- <a href="#" class="btn btn-primary">edit</a>
+        <a routerLink=""></a> -->
       </div>
     </div>
   </div>
-
- 
+</div>

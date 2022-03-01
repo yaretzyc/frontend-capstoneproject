@@ -6,126 +6,88 @@
 <div class="" style="height: 100px; width: 100px; background-color: black;">
 </div> -->
 
-
-
 <!-- https://getbootstrap.com/docs/5.0/components/card/ -->
 <div class="row">
-
-<div *ngFor="let b of books.slice().reverse()"
-class="col-12 col-md-6 col-lg-4"
->
-    
-<div class="card text-white bg-dark " style="width: 18rem;">
-    <img src="{{b.img}}" class="card-img-top rounded mx-auto d-block" alt="image of the book {{b.title}}">
-    <div class="card-body">
-      <h5 class="card-title">{{b.title}}</h5>
-      <p class="card-text">{{b.summary}}</p>
-      <!-- <p>{{b.id}}</p> -->
+    <div *ngFor="let b of books.slice().reverse()" class="col-12 col-md-6 col-lg-4">
+        <div class="card text-white bg-dark" style="width: 18rem">
+            <img src="{{ b.img }}" class="card-img-top rounded mx-auto d-block" alt="image of the book {{ b.title }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ b.title }}</h5>
+                <p class="card-text">{{ b.summary }}</p>
+                <!-- <p>{{b.id}}</p> -->
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-white bg-dark">
+                    Author: {{ b.author }}
+                </li>
+                <li class="list-group-item text-white bg-dark">
+                    Genres: {{ b.genre }}
+                </li>
+                <li class="list-group-item text-white bg-dark">
+                    Length: {{ b.pages }} pg
+                </li>
+            </ul>
+            <div class="card-body">
+                <button (click)="postList(b.id)" class="btn btn-light btn-css">
+                    Posts
+                </button>
+                <button (click)="updateBook(b.id)" class="btn btn-light btn-css">
+                    Edit
+                </button>
+                <button (click)="deleteBook(b.id)" class="btn btn-warning btn-css">
+                    Delete
+                </button>
+            </div>
+        </div>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item text-white bg-dark">Author: {{b.author}}</li>
-      <li class="list-group-item text-white bg-dark">Genres: {{b.genre}}</li>
-      <li class="list-group-item text-white bg-dark">Length: {{b.pages}} pg</li>
-    </ul>
-    <div class="card-body">
-        <button (click)="updateBook(b.id)" class="btn btn-light btn-css">
-          Edit
-        </button>
-        <button (click)="deleteBook(b.id)" class="btn btn-warning btn-css">
-          Delete
-        </button>
-
-    </div>
-  </div>
 </div>
-</div>
-
-
 
 <div class="container">
+    <div class="col-md-6 offset-md-3">
+        <h3>Book</h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <!-- <label> Title</label> -->
+                <input type="text" class="form-control" id="title" [(ngModel)]="book.title" name="title"
+                    placeholder="Title" />
+            </div>
 
-<div class="col-md-6 offset-md-3">
-    <h3>Book</h3>
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <!-- <label> Title</label> -->
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          [(ngModel)]="book.title"
-          name="title"
-          placeholder="Title"
-        />
-      </div>
+            <div class="form-group">
+                <!-- <label> Author </label> -->
+                <input type="text" class="form-control" id="author" [(ngModel)]="book.author" name="author"
+                    placeholder="Author" />
+            </div>
 
-      <div class="form-group">
-        <!-- <label> Author </label> -->
-        <input
-          type="text"
-          class="form-control"
-          id="author"
-          [(ngModel)]="book.author"
-          name="author"
-          placeholder="Author"
-        />
-      </div>
-  
-      <div class="form-group">
-        <!-- <label> Summary </label> -->
-        <input
-          type="text"
-          class="form-control"
-          id="summary"
-          [(ngModel)]="book.summary"
-          name="summary"
-          placeholder="Summary"
-        />
-      </div>
+            <div class="form-group">
+                <!-- <label> Summary </label> -->
+                <input type="text" class="form-control" id="summary" [(ngModel)]="book.summary" name="summary"
+                    placeholder="Summary" />
+            </div>
 
-      <div class="form-group">
-        <!-- <label> genre </label> -->
-        <input
-          type="text"
-          class="form-control"
-          id="genre"
-          [(ngModel)]="book.genre"
-          name="genre"
-          placeholder="Genre"
-        />
-      </div>
-  
-      <div class="form-group">
-        <!-- <label> pages </label> -->
-        <input
-          type="text"
-          class="form-control"
-          id="pages"
-          [(ngModel)]="book.pages"
-          name="pages"
-          placeholder="Pages"
-        />
-      </div>
+            <div class="form-group">
+                <!-- <label> genre </label> -->
+                <input type="text" class="form-control" id="genre" [(ngModel)]="book.genre" name="genre"
+                    placeholder="Genre" />
+            </div>
 
-      <div class="form-group">
-        <!-- <label> image </label> -->
-        <input
-          type="text"
-          class="form-control"
-          id="img"
-          [(ngModel)]="book.img"
-          name="img"
-          placeholder="Image Link"
-        />
-      </div>
+            <div class="form-group">
+                <!-- <label> pages </label> -->
+                <input type="text" class="form-control" id="pages" [(ngModel)]="book.pages" name="pages"
+                    placeholder="Pages" />
+            </div>
 
-      <button class="btn btn-dark" type="submit">Submit</button>
-  </form>
+            <div class="form-group">
+                <!-- <label> image </label> -->
+                <input type="text" class="form-control" id="img" [(ngModel)]="book.img" name="img"
+                    placeholder="Image Link" />
+            </div>
+
+            <button class="btn btn-dark" type="submit">Submit</button>
+        </form>
+    </div>
 </div>
 
-</div>
-
-      <!-- id: number=0;
+<!-- id: number=0;
       title: string='';
       author: string = '';
       img: string = '';
@@ -134,4 +96,3 @@ class="col-12 col-md-6 col-lg-4"
       pages: string = '';
       genre: string = '';
       other: string = ''; -->
-

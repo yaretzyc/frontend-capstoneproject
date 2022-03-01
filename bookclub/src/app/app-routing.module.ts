@@ -19,21 +19,56 @@ const routes: Routes = [
     },
 
     {
-        path: 'post',
-        component: PostComponent
+        // path: 'post',
+        path: 'book/:bookId',
+        component: PostComponent,
+        // children: [
+        //     {
+        //         path: 'update-post/:postId',
+        //         component: EditPostComponent
+        //     }
+        // ]
+        // `book/${this.bookId}/update-post/${postId}/`
     },
     {
         path:'update-quote/:quoteId',
         component: UpdateQuoteComponent
     },
     {
-        path: 'update-post/:postId',
+        path: 'book/:bookId/update-post/:postId',
         component: EditPostComponent
     },
     {
         path:'edit-book/:bookId',
         component: EditBookDetailsComponent
     }
+    // {
+    //     path: '',
+    //     component: LandingComponent
+    // },
+    
+    // {
+    //     path: 'quotes',
+    //     component: QuoteComponent
+    // },
+
+    // {
+    //     // path: 'post',
+    //     path: 'book/:bookId',
+    //     component: PostComponent
+    // },
+    // {
+    //     path:'update-quote/:quoteId',
+    //     component: UpdateQuoteComponent
+    // },
+    // {
+    //     path: 'update-post/:postId',
+    //     component: EditPostComponent
+    // },
+    // {
+    //     path:'edit-book/:bookId',
+    //     component: EditBookDetailsComponent
+    // }
 
 ]
 

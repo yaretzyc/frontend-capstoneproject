@@ -30,18 +30,18 @@ export class BookService {
     }
     
     // //UPDATE Book
-    updateBook(postId:number, Book: Book ): Observable<Object>{
-      return this.httpClient.put<Book>(`${this.apibaseUrl}/book/${postId}/`, Book);
+    updateBook(bookId:number, Book: Book ): Observable<Object>{
+      return this.httpClient.put<Book>(`${this.apibaseUrl}/book/${bookId}/`, Book);
     }
   
     //DELETE Book
-    deleteBook(postId: number): Observable<void>{
-      return this.httpClient.delete<void>(`${this.apibaseUrl}/book/${postId}/`);
+    deleteBook(bookId: number): Observable<void>{
+      return this.httpClient.delete<void>(`${this.apibaseUrl}/book/${bookId}/`);
     }
   
   
     //GET ONE Book: 
-    getOneBook(postId: number): Observable<Book>{
-      return this.httpClient.get<Book>(`${this.apibaseUrl}/book/${postId}/`);
+    getOneBook(bookId: number): Observable<Book>{
+      return this.httpClient.get<Book>(`${this.apibaseUrl}/book/${bookId}/`);
     }
 }
