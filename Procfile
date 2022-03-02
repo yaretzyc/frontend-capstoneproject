@@ -1,1 +1,1 @@
-web:node bookclub/package.json
+web:node bookclub/src/server.js
