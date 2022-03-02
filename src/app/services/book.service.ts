@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Book } from '../book';
-// import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,9 @@ import { Book } from '../book';
 export class BookService {
 
   // private baseURL = "http://localhost:8080/api/book/books/"
-  // private apibaseUrl = environment.baseUrl;
-  private apibaseUrl = "http://localhost:8080/api"
+  // private apibaseUrl = environment.apiBaseUrl;
+
+  private apibaseUrl = 'https://backend-spring-application.herokuapp.com'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,27 +23,27 @@ export class BookService {
   
     //GET ALL Books
     getBookList(): Observable<Book[]>{
-      return this.httpClient.get<Book[]>(`${this.apibaseUrl}/books/`);
+      return this.httpClient.get<Book[]>(`${this.apibaseUrl}/api/books/`);
     }
     
     //ADD Book
     addBook(Book: Book): Observable<Object> {
-      return this.httpClient.post<Book>(`${this.apibaseUrl}/book/`, Book);
+      return this.httpClient.post<Book>(`${this.apibaseUrl}/api/book/`, Book);
     }
     
     // //UPDATE Book
     updateBook(bookId:number, Book: Book ): Observable<Object>{
-      return this.httpClient.put<Book>(`${this.apibaseUrl}/book/${bookId}/`, Book);
+      return this.httpClient.put<Book>(`${this.apibaseUrl}/api/book/${bookId}/`, Book);
     }
   
     //DELETE Book
     deleteBook(bookId: number): Observable<void>{
-      return this.httpClient.delete<void>(`${this.apibaseUrl}/book/${bookId}/`);
+      return this.httpClient.delete<void>(`${this.apibaseUrl}/api/book/${bookId}/`);
     }
   
   
     //GET ONE Book: 
     getOneBook(bookId: number): Observable<Book>{
-      return this.httpClient.get<Book>(`${this.apibaseUrl}/book/${bookId}/`);
+      return this.httpClient.get<Book>(`${this.apibaseUrl}/api/book/${bookId}/`);
     }
 }
