@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Post} from '../post';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -10,7 +10,9 @@ import { environment } from 'src/environments/environment';
 })
 export class PostService {
 
-  private apibaseUrl = environment.baseUrl;
+  // private apibaseUrl = environment.baseUrl;
+  private apibaseUrl = "http://localhost:8080/api"
+
   constructor(private httpClient: HttpClient) { }
 
     getAllPosts(): Observable<Post[]>{

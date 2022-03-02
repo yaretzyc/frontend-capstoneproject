@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Book } from '../book';
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ import { environment } from 'src/environments/environment';
 export class BookService {
 
   // private baseURL = "http://localhost:8080/api/book/books/"
-  private apibaseUrl = environment.baseUrl;
+  // private apibaseUrl = environment.baseUrl;
+  private apibaseUrl = "http://localhost:8080/api"
 
   constructor(private httpClient: HttpClient) { }
 

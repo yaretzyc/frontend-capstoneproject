@@ -2,14 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Quote } from '../quote';
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuoteService {
   // private baseUrl= "http://localhost:8080/api/quotes/";
-  private apibaseUrl = environment.baseUrl;
+  // private apibaseUrl = environment.baseUrl;
+  private apibaseUrl = "http://localhost:8080/api"
+
+
   constructor(private httpClient: HttpClient) { }
 
 

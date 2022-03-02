@@ -23,7 +23,7 @@ export class PostComponent implements OnInit {
   // books: any = Book;
   bookId: number= this.route.snapshot.params['bookId'] ;
 
-  private apibaseUrl = environment.baseUrl;
+  // private apibaseUrl = environment.baseUrl;
 
   constructor(private postService: PostService, private router:Router, private route: ActivatedRoute,
     private http: HttpClient ) { }
