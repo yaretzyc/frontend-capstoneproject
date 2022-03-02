@@ -30,9 +30,9 @@
 
 ## CHALLENGES
   <ul>
-  <li>Cors Issue<li>
-  <li>Getting 404 errors in console Not Found<li>
-  <li>Deployment to heruko<li>
+  <li>Cors Issue</li>
+  <li>Getting 404 errors in console Not Found</li>
+  <li>Deployment to heruko</li>
 
 </ul>
   
