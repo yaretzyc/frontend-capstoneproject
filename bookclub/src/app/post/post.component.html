@@ -1,7 +1,8 @@
 <div class="container">
   <div class="col-md-6 offset-md-3">
     <h3>Post</h3>
-    <form (ngSubmit)="onSubmit()">
+    <form #submitForm = "ngForm" (ngSubmit)="onSubmit(); submitForm.reset()">
+
       <div class="form-group">
         <!-- <label> Title</label> -->
         <input type="text" class="form-control" id="title" [(ngModel)]="posts.title" name="title" placeholder="Title" />

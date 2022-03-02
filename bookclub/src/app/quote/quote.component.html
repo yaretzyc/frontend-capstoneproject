@@ -7,15 +7,28 @@
   <form #submitForm = "ngForm" (ngSubmit)="onSubmit(); submitForm.reset()">
      <div class="form-group">
       <!-- <label> Quote </label> -->
-      <input
+      <textarea
         type="text"
         class="form-control"
         id="quo"
         [(ngModel)]="quotes.quote"
         name="quo"
         placeholder="Quote"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="quotes.name"
+        name="name"
+        placeholder="Name"
       />
     </div>
+
+
     <div class="form-group">
       <!-- <label> </label> -->
       <input
@@ -59,7 +72,7 @@
       >
         <blockquote class="blockquote">
           <p>{{ q.quote }}</p>
-          <footer class="blockquote-footer text-white">
+          <footer class="blockquote-footer text-white"><cite title="Source Title">{{q.name}}</cite>
             chapter <cite title="Source Title">{{ q.chapter }},</cite> page
             <cite title="Source Title">{{ q.page }}</cite>
           </footer>
