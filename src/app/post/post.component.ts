@@ -17,10 +17,6 @@ export class PostComponent implements OnInit {
   post: Array<Post>=[]; //post generates all the posts for that one book id
   posts: Post = new Post(); //onsubmit creates new post
   // bookId: number= 4;
-  // bookId: number = Book["id"];
-  // bookId: any = Book;
-  // bookId :any;
-  // books: any = Book;
   bookId: number= this.route.snapshot.params['bookId'] ;
 
   // private apibaseUrl = environment.baseUrl;
