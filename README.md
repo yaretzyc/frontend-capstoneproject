@@ -1,12 +1,11 @@
 # Frontend Capstone Project for Book Club application
 
-<p>I enjoy reading 📖 and discussing with others book related topics. With the pandemic I though maybe this application can be for other introverts as well who also enjoy reading with a cup of coffee ☕ and posting book quotes and reviews. This repo contains the frontend Angular applciation communicates with the <a href="https://github.com/yaretzyc/backend-capstoneproject" target="_blank">Backend Spring Boot Application</a>.</p>
+<p>I enjoy reading 📖 and discussing with others thoughts on recent reads. With the pandemic I though maybe this application can be for other introverts as well who also enjoy reading with a cup of coffee ☕ and posting book quotes and reviews. This repo contains the frontend Angular applciation communicates with the <a href="https://github.com/yaretzyc/backend-capstoneproject" target="_blank">Backend Spring Boot Application</a>.</p>
 
 
 #### CONTENTS
 - [User Stories](#USER-STORIES)
-- [Technologies](#TECHNOLOGIES)
-- [Installation](#INSTALLATION)
+- [Wireframes](#WIREFRAMES)
 - [Project Challenges](#CHALLENGES)
 - [Future Improvements](#FUTURE-IMPROVEMENTS)
 
@@ -29,18 +28,18 @@
 <p align="center"><img alt="lucidchart_diagram" height="400" src="planning/lucidChart.png"/>
    
 
-## TECHNOLOGIES 
-  -ANGULAR
-  -VSCODE
-
-## INSTALLATION
-
 ## CHALLENGES
+  <ul>
+  <li>Cors Issue<li>
+  <li>Getting 404 errors in console Not Found<li>
+  <li>Deployment to heruko<li>
 
+</ul>
+  
 ## FUTURE IMPROVEMENTS
-   
-## Day by Day 
-   - wed: project planning, user stories, backend Erd,
+   Design of webpage, navigation bar, and not delay deployment of website.
+  
+   -wed: project planning, user stories, backend Erd,
    -thur: Spring boot modules, postman test apis, create angular app components
    -fri:  cors config(backend),environments baseurlapi, quote list, quote create, quote service, approuting, logo, CURRETNLY: LANDING PAGE AND DESIGN 
-   -sat: 
+   
